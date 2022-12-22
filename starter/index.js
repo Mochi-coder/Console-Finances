@@ -87,13 +87,44 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+console.log("Financial Analysis")
+
+console.log("-----------------------------------")
 
 // The total number of months included in the dataset.
 // Figure out how many rows there are in the finances variable
+const startDate = new Date(2010, 01);
+const endDate = new Date(2017, 03);
+
+const monthDiff = endDate.getMonth() - startDate.getMonth() + (12 * (endDate.getFullYear() - startDate.getFullYear()));
+
+console.log("Total Months: " + monthDiff); 
+
 
 // The net total amount of Profit/Losses over the entire period.
 // Add everything together 
 // Loop?
+
+function sumArray(array) {
+    let sum = 0
+
+    for (let i = 0; i < finances.length; i += 1) {
+        sum += finances[i][1];
+    }
+
+    return sum
+}
+
+console.log("Total: $" + sumArray(finances));
+
+
+
+//var sum=0
+//for (var i=0; i <finances.length; i++) {
+//    sum+=finances[i][i];
+//}
+
+//console.log("Total: " + concat(sum));
 
 // The average of the changes in Profit/Losses over the entire period.
 // calculate each change by subtracting the previous month from current

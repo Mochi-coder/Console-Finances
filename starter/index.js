@@ -117,20 +117,24 @@ function sumArray(array) {
 
 console.log("Total: $" + sumArray(finances));
 
-
-
-//var sum=0
-//for (var i=0; i <finances.length; i++) {
-//    sum+=finances[i][i];
-//}
-
-//console.log("Total: " + concat(sum));
-
 // The average of the changes in Profit/Losses over the entire period.
 // calculate each change by subtracting the previous month from current
 // You will need to track what the total change in profits is from month to month and then find the average.
 // (Total/total number of changes) ==> total change/(months-1)
 // Array? using .push(...)
+
+var ProfitChange = [];
+
+for (let a = 1; a < finances.length; a += 1){
+
+    ProfitChange.push(finances[a][1] - finances[a-1][1]);
+   
+}
+const average = ProfitChange.reduce((a, b) => a + b, 0) / ProfitChange.length;
+const result = average.toFixed(2);
+
+
+console.log("Average: $ " + result);
 
 
 //The greatest increase in profits (date and amount) over the entire period.
@@ -138,7 +142,13 @@ console.log("Total: $" + sumArray(finances));
 // check last increase. If'it's bigger than 0, keep track of the new biggest one.
 // in a loop
 
+
+
+
 //The greatest decrease in losses (date and amount) over the entire period.
+
+
+
 
 //Console Output Format:
 //Financial Analysis

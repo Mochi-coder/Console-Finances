@@ -15,6 +15,8 @@ Using Javascript and the dataset given, calculate each of the following:
 
 I found this challenge the most difficult yet. Especially when it came to finding the average of changes. However, through research and the help of others, I managed to finally solve the challenge.
 
+This challenge also gave me insight about arrays, using .push, finding the minimum and maximum figure in arrays, as well as how to round numbers to 2 decimal places. Although JavaScript is a huge challenge at the momemnt, I believe there is still a lot to learn and a lot to research into.
+
 ## Usage
 
 This is a current screenshot of the console log with the calculated data.
